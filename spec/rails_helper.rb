@@ -11,6 +11,21 @@ require 'valkyrie'
 Valkyrie::MetadataAdapter
   .register(Valkyrie::Persistence::Memory::MetadataAdapter.new, :test_adapter)
 
+query_registration_target =
+  Valkyrie::MetadataAdapter.find(:test_adapter).query_service.custom_queries
+custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
+                  Hyrax::CustomQueries::Navigators::ChildFilesetsNavigator,
+                  Hyrax::CustomQueries::Navigators::ChildWorksNavigator,
+                  Hyrax::CustomQueries::FindAccessControl,
+                  Hyrax::CustomQueries::FindCollectionsByType,
+                  Hyrax::CustomQueries::FindManyByAlternateIds,
+                  Hyrax::CustomQueries::FindIdsByModel,
+                  Hyrax::CustomQueries::FindFileMetadata,
+                  Hyrax::CustomQueries::Navigators::FindFiles]
+custom_queries.each do |handler|
+  query_registration_target.register_query_handler(handler)
+end
+
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 begin
