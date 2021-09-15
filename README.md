@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax) 
+using Postgres as the metadata store for objects.  In this application, Fedora is 
+not used for storing object metadata or files. The `main` branch is pinned to Hyrax
+`main`.
 
-Things you may want to cover:
+## Questions
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please direct questions about this code or the servers where it runs to the `#nurax` channel on Samvera slack.
