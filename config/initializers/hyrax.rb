@@ -4,6 +4,9 @@ Hyrax.config do |config|
   config.register_curation_concern :image
   # Injected via `rails g hyrax:work_resource GenericWork`
   config.register_curation_concern :generic_work
+
+  # config.disable_wings = true
+
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
   # @note there are magical roles as defined in Hyrax::RoleRegistry::MAGIC_ROLES
@@ -252,10 +255,10 @@ Hyrax.config do |config|
   # When your application is ready to use the valkyrie index instead of the one
   # maintained by active fedora, you will need to set this to true. You will
   # also need to update your Blacklight configuration.
-  # config.query_index_from_valkyrie = false
+  config.query_index_from_valkyrie = true
 
-  ## Configure index adapter for Valkyrie::Resources to use solr readonly indexer
-  # config.index_adapter = :solr_index
+  # Configure index adapter for Valkyrie::Resources to use solr readonly indexer
+  config.index_adapter = :solr_index
 
   ## Fedora import/export tool
   #
@@ -307,3 +310,18 @@ Date::DATE_FORMATS[:standard] = "%m/%d/%Y"
 Qa::Authorities::Local.register_subauthority('subjects', 'Qa::Authorities::Local::TableBasedAuthority')
 Qa::Authorities::Local.register_subauthority('languages', 'Qa::Authorities::Local::TableBasedAuthority')
 Qa::Authorities::Local.register_subauthority('genres', 'Qa::Authorities::Local::TableBasedAuthority')
+
+# custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
+#                   Hyrax::CustomQueries::Navigators::ChildCollectionsNavigator,
+#                   Hyrax::CustomQueries::Navigators::ParentCollectionsNavigator,
+#                   Hyrax::CustomQueries::Navigators::ChildFilesetsNavigator,
+#                   Hyrax::CustomQueries::Navigators::ChildWorksNavigator,
+#                   Hyrax::CustomQueries::Navigators::FindFiles,
+#                   Hyrax::CustomQueries::FindAccessControl,
+#                   Hyrax::CustomQueries::FindCollectionsByType,
+#                   Hyrax::CustomQueries::FindFileMetadata,
+#                   Hyrax::CustomQueries::FindIdsByModel,
+#                   Hyrax::CustomQueries::FindManyByAlternateIds]
+# custom_queries.each do |handler|
+#   Hyrax.query_service.custom_queries.register_query_handler(handler)
+# end
