@@ -78,3 +78,7 @@ group :development, :test do
 end
 
 gem 'riiif', '~> 2.1'
+
+gem 'dotenv-rails'
+gem "pg", "1.2.3"
+gem "valkyrie-sequel", "~> 2.2.0"
