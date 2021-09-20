@@ -15,5 +15,10 @@ module NuraxPg
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # The locale is set by a query parameter, so if it's not found render 404
+    config.action_dispatch.rescue_responses.merge!(
+      'I18n::InvalidLocale' => :not_found
+    )
   end
 end

@@ -4,8 +4,8 @@
  *= require_self
 */
 
-@import "bootstrap-sprockets";
 @import "bootstrap-default-overrides";
+@import "bootstrap-sprockets";
 @import 'bootstrap';
 @import 'blacklight/blacklight';
 @import "font-awesome";

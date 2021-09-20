@@ -51,7 +51,7 @@ Hyrax.config do |config|
   # Enable displaying usage statistics in the UI
   # Defaults to false
   # Requires a Google Analytics id and OAuth2 keyfile.  See README for more info
-  # config.analytics = false
+  config.analytics = true
 
   # Google Analytics tracking ID to gather usage statistics
   # config.google_analytics_id = 'UA-99999999-1'
@@ -63,7 +63,7 @@ Hyrax.config do |config|
 
   # Enables a link to the citations page for a work
   # Default is false
-  # config.citations = false
+  config.citations = true
 
   # Where to store tempfiles, leave blank for the system temp directory (e.g. /tmp)
   # config.temp_file_base = '/home/developer1'
@@ -72,7 +72,7 @@ Hyrax.config do |config|
   # config.persistent_hostpath = 'http://localhost/files/'
 
   # If you have ffmpeg installed and want to transcode audio and video set to true
-  # config.enable_ffmpeg = false
+  config.enable_ffmpeg = true
 
   # Hyrax uses NOIDs for files and collections instead of Fedora UUIDs
   # where NOID = 10-character string and UUID = 32-character string w/ hyphens
@@ -91,7 +91,7 @@ Hyrax.config do |config|
   # config.redis_namespace = "hyrax"
 
   # Path to the file characterization tool
-  # config.fits_path = "fits.sh"
+  config.fits_path = ENV.fetch('FITS_PATH', 'fits.sh')
 
   # Path to the file derivatives creation tool
   # config.libreoffice_path = "soffice"
@@ -122,7 +122,7 @@ Hyrax.config do |config|
   # Should work creation require file upload, or can a work be created first
   # and a file added at a later time?
   # The default is true.
-  # config.work_requires_files = true
+  config.work_requires_files = false
 
   # How many rows of items should appear on the work show view?
   # The default is 10
@@ -142,7 +142,7 @@ Hyrax.config do |config|
   #   * iiif_image_size_default
   #
   # Default is false
-  # config.iiif_image_server = false
+  # config.iiif_image_server = true
 
   # Returns a URL that resolves to an image provided by a IIIF image server
   config.iiif_image_url_builder = lambda do |file_id, base_url, size, format|
@@ -189,12 +189,12 @@ Hyrax.config do |config|
 
   # Temporary paths to hold uploads before they are ingested into FCrepo
   # These must be lambdas that return a Pathname. Can be configured separately
-  #  config.upload_path = ->() { Rails.root + 'tmp' + 'uploads' }
-  #  config.cache_path = ->() { Rails.root + 'tmp' + 'uploads' + 'cache' }
+  config.upload_path = ->() { ENV.fetch('UPLOADS_PATH', Rails.root + 'tmp' + 'uploads') }
+  config.cache_path = ->() { ENV.fetch('CACHE_PATH', Rails.root + 'tmp' + 'uploads' + 'cache') }
 
   # Location on local file system where derivatives will be stored
   # If you use a multi-server architecture, this MUST be a shared volume
-  # config.derivatives_path = Rails.root.join('tmp', 'derivatives')
+  config.derivatives_path = ENV.fetch('DERIVATIVES_PATH', Rails.root.join('tmp', 'derivatives'))
 
   # Should schema.org microdata be displayed?
   # config.display_microdata = true
@@ -206,7 +206,7 @@ Hyrax.config do |config|
   # Location on local file system where uploaded files will be staged
   # prior to being ingested into the repository or having derivatives generated.
   # If you use a multi-server architecture, this MUST be a shared volume.
-  # config.working_path = Rails.root.join('tmp', 'uploads')
+  config.working_path = ENV.fetch('UPLOADS_PATH', Rails.root.join('tmp', 'uploads'))
 
   # Should the media display partial render a download link?
   # config.display_media_download_link = true
@@ -231,7 +231,7 @@ Hyrax.config do |config|
   # config.fits_message_length = 5
 
   # ActiveJob queue to handle ingest-like jobs
-  # config.ingest_queue_name = :default
+  config.ingest_queue_name = :ingest
 
   ## Attributes for the lock manager which ensures a single process/thread is mutating a ore:Aggregation at once.
   # How many times to retry to acquire the lock before raising UnableToAcquireLockError
@@ -311,17 +311,17 @@ Qa::Authorities::Local.register_subauthority('subjects', 'Qa::Authorities::Local
 Qa::Authorities::Local.register_subauthority('languages', 'Qa::Authorities::Local::TableBasedAuthority')
 Qa::Authorities::Local.register_subauthority('genres', 'Qa::Authorities::Local::TableBasedAuthority')
 
-# custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
-#                   Hyrax::CustomQueries::Navigators::ChildCollectionsNavigator,
-#                   Hyrax::CustomQueries::Navigators::ParentCollectionsNavigator,
-#                   Hyrax::CustomQueries::Navigators::ChildFilesetsNavigator,
-#                   Hyrax::CustomQueries::Navigators::ChildWorksNavigator,
-#                   Hyrax::CustomQueries::Navigators::FindFiles,
-#                   Hyrax::CustomQueries::FindAccessControl,
-#                   Hyrax::CustomQueries::FindCollectionsByType,
-#                   Hyrax::CustomQueries::FindFileMetadata,
-#                   Hyrax::CustomQueries::FindIdsByModel,
-#                   Hyrax::CustomQueries::FindManyByAlternateIds]
-# custom_queries.each do |handler|
-#   Hyrax.query_service.custom_queries.register_query_handler(handler)
-# end
+custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
+                  Hyrax::CustomQueries::Navigators::ChildCollectionsNavigator,
+                  Hyrax::CustomQueries::Navigators::ParentCollectionsNavigator,
+                  Hyrax::CustomQueries::Navigators::ChildFilesetsNavigator,
+                  Hyrax::CustomQueries::Navigators::ChildWorksNavigator,
+                  Hyrax::CustomQueries::Navigators::FindFiles,
+                  Hyrax::CustomQueries::FindAccessControl,
+                  Hyrax::CustomQueries::FindCollectionsByType,
+                  Hyrax::CustomQueries::FindFileMetadata,
+                  Hyrax::CustomQueries::FindIdsByModel,
+                  Hyrax::CustomQueries::FindManyByAlternateIds]
+custom_queries.each do |handler|
+  Hyrax.query_service.custom_queries.register_query_handler(handler)
+end

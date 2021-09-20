@@ -16,19 +16,29 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/derivatives/.keep
+!/tmp/uploads/.keep
+!/tmp/uploads/cache/.keep
+
+# From Rails 5.1
+/node_modules
+/yarn-error.log
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore Ruby artifacts
+/.ruby-*
+
+.env
+.env.development
 
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
 
-/node_modules
-/yarn-error.log
-
-/public/assets
-.byebug_history
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-spec/examples.txt
-.env
+/public/assets
+/spec/examples.txt
