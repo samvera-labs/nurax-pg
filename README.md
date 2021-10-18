@@ -2,8 +2,8 @@
 
 This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax) 
 using Postgres as the metadata store for objects.  In this application, Fedora is 
-not used for storing object metadata or files. The `main` branch is pinned to Hyrax
-`main`.
+not used for storing object metadata or files. The Hyrax gem is pinned to the 
+`main` branch to ensure it has the latest possible code for testing.
 
 ## Known Issues
 
