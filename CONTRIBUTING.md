@@ -18,7 +18,7 @@ All code contributors must have an Individual Contributor License Agreement
 an institution, the institution must have a Corporate Contributor License
 Agreement (cCLA) on file.
 
-https://wiki.duraspace.org/display/samvera/Samvera+Community+Intellectual+Property+Licensing+and+Ownership
+[Samvera Community Intellectual Property Licensing and Ownership](https://samvera.atlassian.net/wiki/x/AwonG)
 
 You should also add yourself to the `CONTRIBUTORS.md` file in the root of the project.
 
@@ -56,7 +56,7 @@ further details.
 ### Reporting Issues
 
 * Make sure you have a [GitHub account](https://github.com/signup/free)
-* Submit a [Github issue](https://github.com/samvera/{{library}}/issues/) by:
+* Submit a [Github issue](https://github.com/samvera-labs/nurax-pg/issues/) by:
   * Clearly describing the issue
     * Provide a descriptive summary
     * Explain the expected behavior
