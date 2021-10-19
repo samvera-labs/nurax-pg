@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 set :application, "nurax-pg"
-set :repo_url, "git@github.com:samvera-labs/nurax-pg.git"
+set :repo_url, "https://github.com/samvera-labs/nurax-pg.git"
 
 set :deploy_to, '/opt/nurax-pg'
 set :rails_env, 'production'
