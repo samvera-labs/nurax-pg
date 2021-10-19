@@ -41,4 +41,5 @@
 /config/master.key
 
 /public/assets
+/public/uv
 /spec/examples.txt
