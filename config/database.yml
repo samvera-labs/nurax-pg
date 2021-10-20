@@ -7,6 +7,9 @@ default: &default
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
   port: <%= ENV['DB_PORT'] %>
+  migrations_paths:
+  - "db/migrate/hyrax"
+  - "db/migrate/valkyrie"
 
 development:
   <<: *default
