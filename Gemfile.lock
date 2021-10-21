@@ -162,6 +162,7 @@ GEM
     bcp47 (0.3.3)
       i18n
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     blacklight (6.24.0)
       bootstrap-sass (~> 3.2)
@@ -959,6 +960,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt_pbkdf
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.0)
   byebug

@@ -52,6 +52,7 @@ gem "honeybadger", "~> 4.0"
 
 # Support OpenSSH keys
 gem 'ed25519'
+gem 'bcrypt_pbkdf'
 
 group :development do
   # Use Capistrano for deployment automation
