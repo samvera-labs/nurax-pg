@@ -22,15 +22,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
 
 gem 'riiif', '~> 2.1'
 
@@ -52,6 +49,9 @@ gem 'hyrax', github: 'samvera/hyrax', ref: 'a37fcb6c432894e2923ba928a6bc979295fc
 gem 'hydra-role-management'
 gem 'sidekiq', '5.2.7'
 gem "honeybadger", "~> 4.0"
+
+# Support OpenSSH keys
+gem 'ed25519'
 
 group :development do
   # Use Capistrano for deployment automation

@@ -345,6 +345,7 @@ GEM
       scanf (~> 1.0)
       sxp (~> 1.1)
       unicode-types (~> 1.6)
+    ed25519 (1.2.4)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     erubi (1.10.0)
@@ -973,6 +974,7 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.6)
   dotenv-rails
+  ed25519
   fcrepo_wrapper
   honeybadger (~> 4.0)
   hydra-role-management
