@@ -1,8 +1,8 @@
 # nurax-pg
 
-This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax) 
-using Postgres as the metadata store for objects.  In this application, Fedora is 
-not used for storing object metadata or files. The Hyrax gem is pinned to the 
+This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax)
+using Postgres as the metadata store for objects.  In this application, Fedora is
+not used for storing object metadata or files. The Hyrax gem is pinned to the
 `main` branch to ensure it has the latest possible code for testing.
 
 ## Known Issues
@@ -23,3 +23,11 @@ Please direct questions about this code or the servers where it runs to the `#nu
 If you're working on a PR for this project, create a feature branch off of `main`.
 
 This repository follows the [Samvera Community Code of Conduct](https://samvera.atlassian.net/wiki/spaces/samvera/pages/405212316/Code+of+Conduct) and [language recommendations](https://github.com/samvera/maintenance/blob/master/templates/CONTRIBUTING.md#language).  Please ***do not*** create a branch called `master` for this repository or as part of your pull request; the branch will either need to be removed or renamed before it can be considered for inclusion in the code base and history of this repository.
+
+## Deployment
+
+The application is set up to deploy to DCE infrastructure ([nurax-pg.curationexperts.com](https://nurax-pg.curationexperts.com)) using Capistrano.
+
+Currently, DCE staff and Hyrax working group members should have their github ssh keys added to the server to enable them to deploy.
+
+You can deploy to the "production" instance (currently the only instance) using `bundle exec cap prod deploy`. This defaults to deploying the main branch. If you want to deploy a different branch, you can set it using the environment variable `BRANCH`, e.g. `BRANCH=MY_BRANCHNAME bundle exec cap prod deploy`.
