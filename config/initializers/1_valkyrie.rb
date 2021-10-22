@@ -4,24 +4,28 @@
 # require "valkyrie/storage/shrine"
 # require "valkyrie/shrine/checksum/s3"
 
-database = ENV.fetch("METADATA_DB_NAME", "nurax_pg_metadata")
-Rails.logger.info "Establishing connection to postgresql on: " \
-                  "#{ENV["DB_HOST"]}:#{ENV["DB_PORT"]}.\n" \
-                  "Using database: #{database}."
-connection = Sequel.connect(
-  user: ENV["DB_USERNAME"],
-  password: ENV["DB_PASSWORD"],
-  host: ENV["DB_HOST"],
-  port: ENV["DB_PORT"],
-  database: database,
-  max_connections: ENV.fetch("DB_POOL", 5),
-  pool_timeout: ENV.fetch("DB_TIMEOUT", 5000),
-  adapter: :postgres
+# database = ENV.fetch("METADATA_DB_NAME", "nurax_pg_metadata")
+# Rails.logger.info "Establishing connection to postgresql on: " \
+#                   "#{ENV["DB_HOST"]}:#{ENV["DB_PORT"]}.\n" \
+#                   "Using database: #{database}."
+# connection = Sequel.connect(
+#   user: ENV["DB_USERNAME"],
+#   password: ENV["DB_PASSWORD"],
+#   host: ENV["DB_HOST"],
+#   port: ENV["DB_PORT"],
+#   database: database,
+#   max_connections: ENV.fetch("DB_POOL", 5),
+#   pool_timeout: ENV.fetch("DB_TIMEOUT", 5000),
+#   adapter: :postgres
+# )
+#
+# Valkyrie::MetadataAdapter
+#   .register(Valkyrie::Sequel::MetadataAdapter.new(connection: connection),
+#             :nurax_pg_metadata_adapter)
+Valkyrie::MetadataAdapter.register(
+  Valkyrie::Persistence::Postgres::MetadataAdapter.new,
+  :nurax_pg_metadata_adapter
 )
-
-Valkyrie::MetadataAdapter
-  .register(Valkyrie::Sequel::MetadataAdapter.new(connection: connection),
-            :nurax_pg_metadata_adapter)
 Valkyrie.config.metadata_adapter = :nurax_pg_metadata_adapter
 
 # shrine_s3_options = {

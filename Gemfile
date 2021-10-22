@@ -45,7 +45,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 
-gem 'hyrax', github: 'samvera/hyrax', ref: 'a37fcb6c432894e2923ba928a6bc979295fc6820'
+gem 'hyrax', github: 'samvera/hyrax', branch: 'main'
 gem 'hydra-role-management'
 gem 'sidekiq', '5.2.7'
 gem "honeybadger", "~> 4.0"
