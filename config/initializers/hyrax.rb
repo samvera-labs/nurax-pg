@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 Hyrax.config do |config|
+  config.collection_model = "Hyrax::PcdmCollection"
+
   # Injected via `rails g hyrax:work_resource Image`
   config.register_curation_concern :image
   # Injected via `rails g hyrax:work_resource GenericWork`
@@ -303,8 +305,6 @@ Hyrax.config do |config|
   # Add registrar implementations by uncommenting and adding to the hash below.
   # See app/services/hyrax/identifier/registrar.rb for the registrar interface
   # config.identifier_registrars = {}
-
-  config.collection_model = "Hyrax::PcdmCollection"
 end
 
 Date::DATE_FORMATS[:standard] = "%m/%d/%Y"
