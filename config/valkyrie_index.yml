@@ -1,11 +1,11 @@
 development:
   host: <%= ENV['VALKYRIE_SOLR_HOST'] || 'localhost' %>
   port: <%= ENV['VALKYRIE_SOLR_PORT'] || 8987 %>
-  core: <%= ENV['VALKYRIE_SOLR_CORE'] || 'hyrax-valkyrie-dev' %>
+  core: <%= ENV['VALKYRIE_SOLR_CORE'] || 'nurax-pg-valkyrie-dev' %>
 test:
   host: <%= ENV['VALKYRIE_SOLR_HOST'] || 'localhost' %>
   port: <%= ENV['VALKYRIE_SOLR_PORT'] || 8987 %>
-  core: <%= ENV['VALKYRIE_SOLR_CORE'] || 'hyrax-valkyrie-test' %>
+  core: <%= ENV['VALKYRIE_SOLR_CORE'] || 'nurax-pg-test' %>
 production:
   host: <%= ENV['VALKYRIE_SOLR_HOST'] %>
   port: <%= ENV['VALKYRIE_SOLR_PORT'] %>
