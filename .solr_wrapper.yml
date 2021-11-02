@@ -5,4 +5,4 @@ instance_dir: tmp/solr-development
 collection:
   persist: true
   dir: solr/conf/
-  name: hydra-development
+  name: nurax-pg-solrwrapper-dev
