@@ -327,3 +327,5 @@ custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
 custom_queries.each do |handler|
   Hyrax.query_service.custom_queries.register_query_handler(handler)
 end
+
+ActiveFedora.init(solr_config_path: Rails.root.join('config','solr.yml'))
