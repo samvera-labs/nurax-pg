@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 97f45609c208dab8d93ce0597f90e39c519a41e2
+  revision: 268f1ab029bc9c87c6fa3534196bb7ba4c53aebd
   branch: main
   specs:
     hyrax (3.1.0)
@@ -140,17 +140,17 @@ GEM
     awesome_nested_set (3.4.0)
       activerecord (>= 4.0.0, < 7.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.522.0)
-    aws-sdk-core (3.121.5)
+    aws-partitions (1.525.0)
+    aws-sdk-core (3.122.0)
       aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.520.1)
+      aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.50.0)
-      aws-sdk-core (~> 3, >= 3.121.2)
+    aws-sdk-kms (1.51.0)
+      aws-sdk-core (~> 3, >= 3.122.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.104.0)
-      aws-sdk-core (~> 3, >= 3.121.2)
+    aws-sdk-s3 (1.105.0)
+      aws-sdk-core (~> 3, >= 3.122.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.4.0)
@@ -425,7 +425,7 @@ GEM
     http-cookie (1.0.4)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http_logger (0.6.0)
+    http_logger (0.7.0)
     httpclient (2.8.3)
     hydra-access-controls (11.0.7)
       active-fedora (>= 10.0.0)
@@ -474,7 +474,7 @@ GEM
       hydra-derivatives (~> 3.0)
       hydra-file_characterization (~> 1.0)
       hydra-pcdm (>= 0.9)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     iiif-image-api (0.2.0)
@@ -641,7 +641,7 @@ GEM
     power_converter (0.1.2)
     public_suffix (4.0.6)
     puma (3.12.6)
-    qa (5.6.0)
+    qa (5.7.0)
       activerecord-import
       deprecation
       faraday
@@ -896,7 +896,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tinymce-rails (5.10.0)
+    tinymce-rails (5.10.1)
       railties (>= 3.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
