@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 268f1ab029bc9c87c6fa3534196bb7ba4c53aebd
-  branch: main
+  revision: b05388ba28e1478ca8828905c954fbe7c5e30bb1
+  branch: as_create_default_slim
   specs:
     hyrax (3.1.0)
       active-fedora (~> 13.1, >= 13.1.2)
