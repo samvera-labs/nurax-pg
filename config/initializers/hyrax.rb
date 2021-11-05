@@ -78,7 +78,7 @@ Hyrax.config do |config|
 
   # Hyrax uses NOIDs for files and collections instead of Fedora UUIDs
   # where NOID = 10-character string and UUID = 32-character string w/ hyphens
-  # config.enable_noids = true
+  config.enable_noids = false
 
   # Template for your repository's NOID IDs
   # config.noid_template = ".reeddeeddk"
@@ -328,4 +328,4 @@ custom_queries.each do |handler|
   Hyrax.query_service.custom_queries.register_query_handler(handler)
 end
 
-ActiveFedora.init(solr_config_path: Rails.root.join('config','solr.yml'))
+ActiveFedora.init(solr_config_path: Rails.root.join('config', 'solr.yml'))
