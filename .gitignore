@@ -30,9 +30,6 @@
 # Ignore Ruby artifacts
 /.ruby-*
 
-.env
-.env.development
-
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
