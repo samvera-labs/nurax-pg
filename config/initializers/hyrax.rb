@@ -7,7 +7,7 @@ Hyrax.config do |config|
   # Injected via `rails g hyrax:work_resource GenericWork`
   config.register_curation_concern :generic_work
 
-  # config.disable_wings = true # not needed if ENV includes HYRAX_SKIP_WINGS=true
+  config.disable_wings = true # not needed if ENV includes HYRAX_SKIP_WINGS=true
 
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
