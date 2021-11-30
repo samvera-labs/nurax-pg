@@ -28,6 +28,7 @@ gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier', '>= 1.3.0'
 gem 'valkyrie', '~> 2', '>= 2.1.1'
+gem 'valkyrie-shrine', '~> 0.5'
 
 group :development do
   # Use Capistrano for deployment automation
