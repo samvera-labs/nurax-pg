@@ -5,5 +5,7 @@
 Hyrax::AdminSetCreateService.find_or_create_default_admin_set.id
 
 admin_role = Role.find_or_create_by(name: 'admin')
-admin_role.users << User.find_or_create_by!(email: 'admin@localhost', password: 'testing')
+admin = User.find_by(email: 'admin@localhost') ||
+        User.create!(email: 'admin@localhost', password: 'testing')
+admin_role.users << admin
 admin_role.save
