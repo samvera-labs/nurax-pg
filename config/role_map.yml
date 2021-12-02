@@ -19,3 +19,30 @@
 #
 # You can create non-admin roles and assign users to those roles using a similar pattern.
 #
+# The following roles might be used for testing, so they remain here.  They will not
+# be available for use when logged in through the browser.
+#
+development:
+  archivist:
+    - archivist1@example.com
+
+test:
+  archivist:
+    - archivist1@example.com
+    - archivist2@example.com
+    - leland_himself@example.com
+  admin_policy_object_editor:
+    - archivist1@example.com
+  donor:
+    - donor1@example.com
+    - leland_himself@example.com
+  researcher:
+    - archivist1@example.com
+    - researcher1@example.com
+  patron:
+    - patron1@example.com
+    - leland_himself@example.com
+
+production:
+  admin:
+    - systems@curationexperts.com
