@@ -15,6 +15,11 @@ module NuraxPg
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    #
+    # Always log to stdout by default
+    logger = ActiveSupport::Logger.new($stdout)
+    logger.formatter = config.log_formatter
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
 
     # The locale is set by a query parameter, so if it's not found render 404
     config.action_dispatch.rescue_responses.merge!(
