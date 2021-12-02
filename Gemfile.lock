@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/samvera/hyrax.git
-  revision: 703ce4ad4ed8575e86227d03c55e4ebd4d2960ae
-  branch: main
+  remote: https://github.com/dunn/hyrax.git
+  revision: 2eef72432802ce52d73489b9d86aebc46a3dfb92
+  branch: valkyrie-characterization
   specs:
     hyrax (3.2.0)
       active-fedora (~> 13.1, >= 13.1.2)
@@ -24,8 +24,9 @@ GIT
       font-awesome-rails (~> 4.2)
       hydra-derivatives (~> 3.3)
       hydra-editor (~> 5.0, >= 5.0.4)
+      hydra-file_characterization (~> 1.1.2)
       hydra-head (~> 11.0, >= 11.0.1)
-      hydra-works (>= 0.16, < 2.0)
+      hydra-works (>= 0.16)
       iiif_manifest (>= 0.3, < 2.0)
       jquery-datatables-rails (~> 3.4)
       jquery-ui-rails (~> 6.0)
@@ -475,9 +476,9 @@ GEM
       bundler (>= 1.5)
       cancancan
       json (>= 1.8)
-    hydra-works (1.2.0)
-      activesupport (>= 4.2.10, < 6.0)
-      hydra-derivatives (~> 3.0)
+    hydra-works (2.0.0)
+      activesupport (>= 5.2, < 7.0)
+      hydra-derivatives (~> 3.6)
       hydra-file_characterization (~> 1.0)
       hydra-pcdm (>= 0.9)
     i18n (1.8.11)
