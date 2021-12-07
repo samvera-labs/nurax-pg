@@ -50,11 +50,6 @@ Hyrax.config do |config|
   #   maxFileSize: 500.megabytes
   # }
 
-  # Enable displaying usage statistics in the UI
-  # Defaults to false
-  # Requires a Google Analytics id and OAuth2 keyfile.  See README for more info
-  config.analytics = true
-
   # Google Analytics tracking ID to gather usage statistics
   # config.google_analytics_id = 'UA-99999999-1'
 
