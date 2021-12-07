@@ -8,7 +8,7 @@ default: &default
   host: <%= ENV['DB_HOST'] %>
   port: <%= ENV['DB_PORT'] %>
   migrations_paths:
-  - "db/migrate/hyrax"
+  - "db/migrate"
   - "db/migrate/valkyrie"
 
 development:
