@@ -55,6 +55,9 @@ gem 'ed25519'
 gem 'bcrypt_pbkdf'
 
 group :development do
+  gem 'better_errors' # add command line in browser when errors
+  gem 'binding_of_caller' # deeper stack trace used by better errors
+
   # Use Capistrano for deployment automation
   gem 'capistrano', '~> 3.16', require: false
   gem 'capistrano-bundler', '~> 2.0'
