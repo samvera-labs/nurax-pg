@@ -17,7 +17,6 @@ services:
     depends_on:
       - chrome
       - db_migrate
-      - minio
       - postgres
       - redis
       - solr
@@ -42,7 +41,6 @@ services:
       - .env
     depends_on:
       - db_migrate
-      - minio
       - postgres
       - redis
       - solr
@@ -99,18 +97,6 @@ services:
     #   - "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
-    networks:
-      - nurax-pg
-
-  minio:
-    image: bitnami/minio:2021.11.9
-    ports:
-      - '9001:9001'
-      - '9000:9000'
-    volumes:
-      - nurax-pg_minio:/data
-    env_file:
-      - .env
     networks:
       - nurax-pg
 
