@@ -18,7 +18,6 @@ services:
       - chrome
       - db_migrate
       - minio
-      - memcached
       - postgres
       - redis
       - solr
@@ -44,7 +43,6 @@ services:
     depends_on:
       - db_migrate
       - minio
-      - memcached
       - postgres
       - redis
       - solr
@@ -101,13 +99,6 @@ services:
     #   - "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
-    networks:
-      - nurax-pg
-
-  memcached:
-    image: bitnami/memcached
-    ports:
-      - '11211:11211'
     networks:
       - nurax-pg
 
