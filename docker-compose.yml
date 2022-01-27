@@ -11,7 +11,7 @@ services:
     restart: always
     user: root
     env_file:
-      - .env
+      - .env.docker
     environment:
       - RAILS_ROOT=/app/samvera/hyrax-webapp
     depends_on:
@@ -38,7 +38,7 @@ services:
     restart: always
     user: root
     env_file:
-      - .env
+      - .env.docker
     depends_on:
       - db_migrate
       - postgres
@@ -69,7 +69,7 @@ services:
   db_migrate:
     image: nurax-pg
     env_file:
-      - .env
+      - .env.docker
     command:
       - sh
       - -c
@@ -92,7 +92,7 @@ services:
     image: postgres:latest
     restart: always
     env_file:
-      - .env
+      - .env.docker
     # ports:
     #   - "5432:5432"
     volumes:
@@ -103,7 +103,7 @@ services:
   redis:
     image: bitnami/redis:6.2
     env_file:
-      - .env
+      - .env.docker
     volumes:
       - redis:/data
     networks:
@@ -114,7 +114,7 @@ services:
     ports:
       - 8983:8983
     env_file:
-      - .env
+      - .env.docker
     volumes:
       - ./solr/conf:/opt/nurax-pg
       - solr_home:/var/solr/data:cached
