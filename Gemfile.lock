@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: c959fef71cbfc09691961eae1aa6b626af6f6602
+  revision: 8e41759c09352eb7441d7418f0906ad14606fe78
   branch: main
   specs:
     hyrax (3.3.0)
@@ -483,7 +483,7 @@ GEM
       hydra-derivatives (~> 3.6)
       hydra-file_characterization (~> 1.0)
       hydra-pcdm (>= 0.9)
-    i18n (1.9.0)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     iiif-image-api (0.2.0)
