@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 8e41759c09352eb7441d7418f0906ad14606fe78
+  revision: a778e23792d3cd092a8dd98741f2703f052a1abc
   branch: main
   specs:
     hyrax (3.3.0)
@@ -141,7 +141,7 @@ GEM
     awesome_nested_set (3.4.0)
       activerecord (>= 4.0.0, < 7.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.550.0)
+    aws-partitions (1.551.0)
     aws-sdk-core (3.125.5)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
@@ -718,13 +718,13 @@ GEM
       rdf (~> 3.2)
     rdf-json (3.2.0)
       rdf (~> 3.2)
-    rdf-microdata (3.2.0)
+    rdf-microdata (3.2.1)
       htmlentities (~> 4.3)
-      nokogiri (~> 1.12)
+      nokogiri (~> 1.13)
       rdf (~> 3.2)
       rdf-rdfa (~> 3.2)
       rdf-xsd (~> 3.2)
-    rdf-n3 (3.2.0)
+    rdf-n3 (3.2.1)
       ebnf (~> 2.2)
       rdf (~> 3.2)
       sparql (~> 3.2)
@@ -850,12 +850,12 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
-    shacl (0.2.0)
+    shacl (0.2.1)
       json-ld (~> 3.2)
       rdf (~> 3.2)
       sparql (~> 3.2)
       sxp (~> 1.2)
-    shex (0.7.0)
+    shex (0.7.1)
       ebnf (~> 2.2)
       htmlentities (~> 4.3)
       json-ld (~> 3.2)
