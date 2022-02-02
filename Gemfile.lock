@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 3ad205062d64bc20b441bf1e5aa0fa4b7d4e90a3
+  revision: 128272586079876a3f7ac40b583cb51baa5d0187
   branch: main
   specs:
     hyrax (3.3.0)
@@ -772,7 +772,7 @@ GEM
       rexml (~> 3.2)
     redic (1.5.3)
       hiredis
-    redis (4.5.1)
+    redis (4.6.0)
     redis-namespace (1.8.1)
       redis (>= 3.0.4)
     redlock (1.2.2)
