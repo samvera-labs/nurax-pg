@@ -319,7 +319,7 @@ Qa::Authorities::Local.register_subauthority('genres', 'Qa::Authorities::Local::
 custom_queries = [Hyrax::CustomQueries::Navigators::CollectionMembers,
                   Hyrax::CustomQueries::Navigators::ChildCollectionsNavigator,
                   Hyrax::CustomQueries::Navigators::ParentCollectionsNavigator,
-                  Hyrax::CustomQueries::Navigators::ChildFilesetsNavigator,
+                  Hyrax::CustomQueries::Navigators::ChildFileSetsNavigator,
                   Hyrax::CustomQueries::Navigators::ChildWorksNavigator,
                   Hyrax::CustomQueries::Navigators::FindFiles,
                   Hyrax::CustomQueries::FindAccessControl,

@@ -67,3 +67,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'solr_wrapper', '>= 0.3'
 end
+
+# temporary pin of RDF to 3.2.4 - requires AF release to unpin (see AF PR #1468)
+gem 'rdf', '= 3.2.4'
