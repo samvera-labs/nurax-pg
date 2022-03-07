@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: f46c139399ff85bea3310f23050011c0cbdd609e
+  revision: 981132d0c5384930ca8cd18f75aebf97160dc7e4
   branch: main
   specs:
     hyrax (3.3.0)
@@ -44,6 +44,7 @@ GIT
       qa (~> 5.5, >= 5.5.1)
       rails (~> 5.0)
       rails_autolink (~> 1.1)
+      rdf (< 3.2.5)
       rdf-rdfxml
       rdf-vocab (~> 3.0)
       redis-namespace (~> 1.5)
@@ -84,7 +85,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active-fedora (13.2.5)
+    active-fedora (13.2.7)
       active-triples (>= 0.11.0, < 2.0.0)
       activemodel (>= 5.1)
       activesupport (>= 5.1)
@@ -141,17 +142,17 @@ GEM
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     aws-eventstream (1.2.0)
-    aws-partitions (1.558.0)
-    aws-sdk-core (3.126.2)
+    aws-partitions (1.563.0)
+    aws-sdk-core (3.128.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.54.0)
-      aws-sdk-core (~> 3, >= 3.126.0)
+    aws-sdk-kms (1.55.0)
+      aws-sdk-core (~> 3, >= 3.127.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.112.0)
-      aws-sdk-core (~> 3, >= 3.126.0)
+    aws-sdk-s3 (1.113.0)
+      aws-sdk-core (~> 3, >= 3.127.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.4.0)
@@ -295,8 +296,8 @@ GEM
       activesupport (>= 5.0)
       request_store (>= 1.0)
       ruby2_keywords
-    dropbox_api (0.1.18)
-      faraday (<= 1.0)
+    dropbox_api (0.1.21)
+      faraday (< 3.0)
       oauth2 (~> 1.1)
     dry-configurable (0.14.0)
       concurrent-ruby (~> 1.0)
@@ -773,7 +774,7 @@ GEM
     redic (1.5.3)
       hiredis
     redis (4.6.0)
-    redis-namespace (1.8.1)
+    redis-namespace (1.8.2)
       redis (>= 3.0.4)
     redlock (1.2.2)
       redis (>= 3.0.0, < 5.0)
@@ -1008,7 +1009,6 @@ DEPENDENCIES
   pry-rescue
   puma (~> 5.5.2)
   rails (~> 5.2.6)
-  rdf (= 3.2.4)
   riiif (~> 2.1)
   rsolr (>= 1.0, < 3)
   rspec-rails
