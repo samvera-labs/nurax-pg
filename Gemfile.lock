@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 2f4f5c4104c9b90f301a1681399100ad5de035c4
+  revision: 4765c04d1c5b819134c315bfff8f790e2c3e9afe
   branch: main
   specs:
     hyrax (3.3.0)
@@ -142,8 +142,8 @@ GEM
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     aws-eventstream (1.2.0)
-    aws-partitions (1.563.0)
-    aws-sdk-core (3.128.1)
+    aws-partitions (1.565.0)
+    aws-sdk-core (3.129.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
