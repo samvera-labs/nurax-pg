@@ -58,4 +58,11 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Whitelist container IP for web-console
+  config.web_console.whitelisted_ips = Socket.getifaddrs.select { |ifa|
+    ifa.addr.ipv4_private?
+  }.map { |ifa|
+    IPAddr.new(ifa.addr.ip_address + '/' + ifa.netmask.ip_address)
+  }
 end
