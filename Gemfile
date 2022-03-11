@@ -22,7 +22,7 @@ gem 'rails', '~> 5.2.6'
 gem 'riiif', '~> 2.1'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'sass-rails', '~> 5.0'
-gem 'sidekiq', '6.2.1'
+gem 'sidekiq', '~> 6.4'
 gem 'turbolinks', '~> 5'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
