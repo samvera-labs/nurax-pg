@@ -54,7 +54,7 @@ services:
       - nurax-pg
 
   chrome:
-    image: selenium/standalone-chrome:96.0
+    image: selenium/standalone-chrome:4.1
     logging:
       driver: none
     volumes:
@@ -90,14 +90,14 @@ services:
       - nurax-pg
 
   postgres:
-    image: postgres:latest
+    image: bitnami/postgresql:14
     restart: always
     env_file:
       - .env.docker
     # ports:
     #   - "5432:5432"
     volumes:
-      - db:/var/lib/postgresql/data
+      - db:/bitnami/postgresql
     networks:
       - nurax-pg
 
@@ -106,19 +106,19 @@ services:
     env_file:
       - .env.docker
     volumes:
-      - redis:/data
+      - redis:/bitnami/redis/data
     networks:
       - nurax-pg
 
   solr:
-    image: bitnami/solr:8.11.0
+    image: bitnami/solr:8.11.1
     ports:
       - 8983:8983
     env_file:
       - .env.docker
     volumes:
       - ./solr/conf:/opt/nurax-pg
-      - solr_home:/var/solr/data:cached
+      - solr_home:/bitnami
     networks:
       - nurax-pg
 
@@ -132,7 +132,6 @@ volumes:
   sidekiq-public:
   sidekiq-tmp:
   solr_home:
-  nurax-pg_minio:
 
 networks:
   nurax-pg:
