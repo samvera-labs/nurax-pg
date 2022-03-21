@@ -59,7 +59,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # Whitelist container IP for web-console
+  # Allowlist container IP for web-console
+  # FIXME: Update next line to use `allowed_ips` once web-console is upgraded to 4.0.3+
   config.web_console.whitelisted_ips = Socket.getifaddrs.select { |ifa|
     ifa.addr.ipv4_private?
   }.map { |ifa|
