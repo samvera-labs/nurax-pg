@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 4c1a99a6a52c973781dff090c2c98c044ea65e42
+  revision: fdc32d80e478388b0bd778764b0e021b4a34f6aa
   branch: main
   specs:
     hyrax (3.4.1)
@@ -141,8 +141,8 @@ GEM
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     aws-eventstream (1.2.0)
-    aws-partitions (1.573.0)
-    aws-sdk-core (3.130.0)
+    aws-partitions (1.576.0)
+    aws-sdk-core (3.130.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -488,7 +488,7 @@ GEM
     ice_nine (0.11.2)
     iiif-image-api (0.2.0)
       activesupport
-    iiif_manifest (1.1.0)
+    iiif_manifest (1.1.1)
       activesupport (>= 4)
     interception (0.5)
     io-like (0.3.1)
@@ -629,7 +629,7 @@ GEM
     noid-rails (3.0.3)
       actionpack (>= 5.0.0, < 7)
       noid (~> 0.9)
-    nokogiri (1.13.3)
+    nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oauth (0.5.8)
@@ -661,7 +661,7 @@ GEM
     pry-rescue (1.5.2)
       interception (>= 0.5)
       pry (>= 0.12.0)
-    public_suffix (4.0.6)
+    public_suffix (4.0.7)
     puma (5.5.2)
       nio4r (~> 2.0)
     qa (5.8.1)

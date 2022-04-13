@@ -45,3 +45,5 @@
 # Ignore .env -- Do not check-in this file.  Use an extension if one is needed (e.g. .env.docker)
 # The presense of this file can break the deploy process.
 .env
+
+fits.log
