@@ -40,6 +40,9 @@
 /public/assets
 /public/files
 /public/uv
+/public/branding/*
+!public/branding/.keep
+
 /spec/examples.txt
 
 # Ignore .env -- Do not check-in this file.  Use an extension if one is needed (e.g. .env.docker)
