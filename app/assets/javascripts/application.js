@@ -16,7 +16,7 @@
 //
 // Required by Blacklight
 //= require jquery3
-//= require rails_ujs
+//= require rails-ujs
 //= require popper
 //= require twitter/typeahead
 //= require bootstrap
