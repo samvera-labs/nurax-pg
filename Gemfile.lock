@@ -864,7 +864,7 @@ GEM
       rdf-xsd (~> 3.2)
       sparql (~> 3.2)
       sxp (~> 1.2)
-    sidekiq (6.2.1)
+    sidekiq (6.4.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
@@ -1013,7 +1013,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
-  sidekiq (= 6.2.1)
+  sidekiq (~> 6.4)
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
