@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 7add21367fb551174b07ba13803c16e5bd132458
+  revision: 74173c75e61abd581d6e77cd13fd33396a86c3d7
   branch: main
   specs:
     hyrax (4.0.0.beta1)
@@ -155,8 +155,8 @@ GEM
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     aws-eventstream (1.2.0)
-    aws-partitions (1.628.0)
-    aws-sdk-core (3.145.0)
+    aws-partitions (1.631.0)
+    aws-sdk-core (3.149.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -270,7 +270,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
-    connection_pool (2.2.5)
+    connection_pool (2.3.0)
     crass (1.0.6)
     debug_inspector (1.1.0)
     declarative (0.0.20)
@@ -313,7 +313,7 @@ GEM
     dry-configurable (0.15.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.6)
-    dry-container (0.10.1)
+    dry-container (0.11.0)
       concurrent-ruby (~> 1.0)
     dry-core (0.8.1)
       concurrent-ruby (~> 1.0)
@@ -332,12 +332,12 @@ GEM
     dry-monads (1.4.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.7)
-    dry-schema (1.10.2)
+    dry-schema (1.10.4)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.13, >= 0.13.0)
       dry-core (~> 0.5, >= 0.5)
       dry-initializer (~> 3.0)
-      dry-logic (~> 1.0)
+      dry-logic (~> 1.2)
       dry-types (~> 1.5)
     dry-struct (1.4.0)
       dry-core (~> 0.5, >= 0.5)
@@ -392,7 +392,7 @@ GEM
     geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-apis-core (0.7.0)
+    google-apis-core (0.8.0)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.16.2, < 2.a)
       httpclient (>= 2.8.1, < 3.a)
@@ -583,7 +583,7 @@ GEM
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
     logger (1.5.1)
-    loofah (2.18.0)
+    loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -626,12 +626,12 @@ GEM
       version_gem (~> 1.1)
     oauth-tty (1.0.3)
       version_gem (~> 1.1)
-    oauth2 (1.4.10)
+    oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
+      rack (>= 1.2, < 4)
     openseadragon (0.6.0)
       rails (> 3.2.0)
     orm_adapter (0.5.0)
@@ -940,8 +940,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.2.0)
-    unicode-types (1.7.0)
+    unicode-display_width (2.3.0)
+    unicode-types (1.8.0)
     valkyrie (2.2.0)
       activemodel
       activesupport
@@ -958,7 +958,7 @@ GEM
       reform (~> 2.2)
       reform-rails
     version_gem (1.1.0)
-    view_component (2.71.0)
+    view_component (2.72.0)
       activesupport (>= 5.0.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
